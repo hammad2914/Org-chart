@@ -1,0 +1,36 @@
+.highcharts-figure {
+  min-width: 360px;
+  max-width: 2400px;
+  margin: 1em auto;
+}
+#container{
+  width: 2400px;
+}
+#highcharts-oru5d2p-0, #highcharts-oru5d2p-0 svg{
+  height: 1200px !important;
+}
+.node-box{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.node-img{
+  border-radius: 50%;
+}
+.node-info h6 , .node-info p, .node-info h5 {
+  margin: 0px;
+}
+.node-info h6{
+  font-size: 12px;
+  color: #fff;
+  word-wrap: break-word !important;
+}
+.node-info h5{
+  font-size: 13px;
+  color: #fff;
+  
+}
+.node-info p {
+  color: #fff;
+  font-size: 9px;
+}
