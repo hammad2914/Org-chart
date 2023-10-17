@@ -49,6 +49,7 @@
         </table>
     </div>
 
+
     <div class="chart">
         <div class="chart-header">
             <div class="euro-logo">
@@ -74,13 +75,13 @@
             </div>
         </div>
         <div id="tree"></div>
-        <div id="black-tree" style="display: none;"></div>
     </div>
 
 
     <script>
         const toggleCheckbox = document.getElementById('toggle-checkbox');
         const toggleLabel = document.getElementById('toggle-label');
+        const greyform = document.getElementById('editForm')
 
         toggleCheckbox.addEventListener('change', function () {
             toggleLabel.textContent = toggleCheckbox.checked ? 'Switch Back To Full Experience' : 'Switch to Low Carbon Version';
@@ -90,16 +91,15 @@
 
         toggleCheckbox.addEventListener('change', function () {
             if (toggleCheckbox.checked) {
-                blackTree.style.display = 'block';
-                tree.style.display = 'none';
+                tree.style.filter = 'grayscale(100%)'; 
+                greyform.style.filter = 'grayscale(100%)'; 
             } else {
-                blackTree.style.display = 'none';
-                tree.style.display = 'block';
+                tree.style.filter = 'grayscale(0%)'; 
+                greyform.style.filter = 'grayscale(0%)'; 
             }
         });
     </script>
     <script src="./script.js"></script>
-    <script src="./black-chart.js"></script>
 </body>
 
 </html>
