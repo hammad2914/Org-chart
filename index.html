@@ -10,7 +10,7 @@
     <script src="./orgchart.js"></script>
 </head>
 
-<body>
+<body id="body">
     <div id="editForm"
         style="
                 position: absolute;
@@ -53,16 +53,7 @@
     <div class="chart">
         <div class="chart-header">
             <div class="euro-logo">
-                <img src="./assets/Color/12.png" alt="Euro Centra Logo">
-            </div>
-
-            <div class="custom-toggle">
-                <div class="button r" id="button-1">
-                    <input type="checkbox" class="checkbox" id="toggle-checkbox" />
-                    <div class="knobs"></div>
-                    <div class="layer"></div>
-                </div>
-                <span class="toggle-label" id="toggle-label">Switch to Low Carbon Version</span>
+                <img src="./assets/ecp-small.png" alt="Euro Centra Logo">
             </div>
 
             <div class="heading">
@@ -71,8 +62,16 @@
             </div>
 
             <div class="bonprix-logo">
-                <img src="./assets/Color/0.png" alt="Bonprix Logo">
+                <img src="./assets/bonprix.jpg" alt="Bonprix Logo">
             </div>
+        </div>
+        <div class="custom-toggle">
+            <div class="button r" id="button-1">
+                <input type="checkbox" class="checkbox" id="toggle-checkbox" />
+                <div class="knobs"></div>
+                <div class="layer"></div>
+            </div>
+            <span class="toggle-label" id="toggle-label">Switch to Low Carbon Version</span>
         </div>
         <div id="tree"></div>
     </div>
@@ -86,7 +85,6 @@
         toggleCheckbox.addEventListener('change', function () {
             toggleLabel.textContent = toggleCheckbox.checked ? 'Switch Back To Full Experience' : 'Switch to Low Carbon Version';
         });
-        const blackTree = document.getElementById('black-tree');
         const tree = document.getElementById('tree');
 
         toggleCheckbox.addEventListener('change', function () {

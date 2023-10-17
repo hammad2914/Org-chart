@@ -25,9 +25,64 @@ html, body {
     align-items: center;
 }
 
-.bonprix-logo img, .euro-logo img{
-    width: 100px;
+.heading h2{
+    font-size: 28px;
+    margin: 0px;
 }
+.heading h3{
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+.bonprix-logo img, .euro-logo img{
+    width: 120px;
+}
+
+@media(max-width:992px){
+    .heading h2{
+        font-size: 22px;
+    }
+    .heading h3{
+        font-size: 18px;
+    } 
+    .chart-header{
+        padding: 10px 0px;
+    }
+}
+
+@media(max-width:576px){
+    .heading h2{
+        font-size: 18px !important;
+    }
+    .heading h3{
+        font-size: 14px !important;
+    } 
+    .bonprix-logo img, .euro-logo img{
+        width: 60px;
+    }
+    .chart-header{
+        padding: 10px 0px;
+    }
+}
+@media(max-width:450px){
+    .heading h2{
+        font-size: 16px !important;
+    }
+    .heading h3{
+        font-size: 12px !important;
+    } 
+    .bonprix-logo, .euro-logo{
+        display: none;
+    }
+    .toggle-label {
+        margin-left: 10px;
+        font-size: 8px !important;
+     }
+     .chart-header{
+        padding: 10px 0px;
+        justify-content: center;
+    }
+}
+
 
 /* Toggle Button */
 
@@ -46,7 +101,7 @@ html, body {
     width: auto;
     justify-content: center;
     align-items: center;
-    margin: 0px;
+    margin: 10px 0px;
 }
 
 .button-cover,
@@ -92,7 +147,7 @@ html, body {
 
 .layer {
     width: 100%;
-    background-color: #12574B;
+    background-color: #fff;
     transition: 0.3s ease all;
     z-index: 1;
 }
@@ -105,7 +160,7 @@ html, body {
     left: 2px;
     width: 13px;
     height: 8px;
-    color: #fff;
+    color: #12574B;
     font-family: 'Font Awesome 5 Free';
     font-size: 10px;
     font-weight: bold;
@@ -120,7 +175,7 @@ html, body {
 #button-1 .checkbox:checked+.knobs:before {
     content: "\f0e7";
     left: 24px;
-    color: #fff;
+    color: #12574B;
 }
 
 #button-1::after {
@@ -135,8 +190,8 @@ html, body {
 
 
 #button-1 .checkbox:checked~.layer {
-    background-color: #fff;
-    color: #fff;
+    background-color: #12574B;
+    color: #12574B;
 }
 
 #button-1 .knobs,
