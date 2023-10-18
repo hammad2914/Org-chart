@@ -332,7 +332,7 @@ chart.load([
       pid: 'Dania Jamil',
       title: 'Laboratory Incharge',
       img: './assets/Color/59.png',
-      email: ''
+      email: 'owais@eurocentra.com.pk'
     },
     {
       name: 'Ismail Khan',
