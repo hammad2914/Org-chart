@@ -98,6 +98,9 @@ html, body {
     #email{
         font-size: 10px !important;
     }
+    #img{
+        width: 110px !important;
+    }
 }
 
 
