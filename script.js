@@ -343,7 +343,7 @@ chart.load([
       email: 'ismail@eurocentra.com.pk'
     },
     {
-      name: 'Digitalization Asset Management (DAM)',
+      name: 'Digitalization Asset Management',
       id: 'DAM',
       pid: 'Zahid Sajjad',
       title: '',
@@ -375,7 +375,7 @@ chart.load([
       email: ''
     },
     {
-      name: 'Human Asset Management (HAM)',
+      name: 'Human Asset Management',
       id: 'HAM',
       pid: 'Zahid Sajjad',
       title: '',
@@ -466,8 +466,8 @@ chart.load([
       id: 'TBH',
       pid: 'HAM',
       name: 'TBH',
-      title: 'Talent Acquisition Specialist',
-      img: './assets/Color/00.png',
+      title: 'Happiness Officer',
+      img: './assets/Color/no-image.png',
       email: ''
     },
     {
