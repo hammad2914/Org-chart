@@ -5,7 +5,7 @@ OrgChart.templates.myTemplate.size = [125, 190];
 OrgChart.templates.myTemplate.node = '<rect x="0" y="0" height="190" width="125" fill="#ffffff" stroke-width="1" stroke="#aeaeae" rx="5" ry="5"></rect>';
 OrgChart.templates.myTemplate.field_0 = '<text data-width="100" data-text-overflow="multiline" style="font-size: 15px;font-weight: bold;" fill="#2D2D2D" x="62.5" y="85" text-anchor="middle">{val}</text>';
 OrgChart.templates.myTemplate.field_1 = '<text data-width="110" data-text-overflow="multiline"  style="font-size: 12px;" fill="#2D2D2D" x="62.5" y="125" text-anchor="middle">{val}</text>';
-OrgChart.templates.myTemplate.img_0 = '<clipPath id="{randId}"><circle cx="60" cy="37" r="30"></circle></clipPath><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="30" y="7"  width="60" height="60"></image>';
+OrgChart.templates.myTemplate.img_0 = '<image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="32.5" y="7"  width="60" height="60"></image>';
 OrgChart.templates.myTemplate.plus = '<circle cx="15" cy="15" r="15" fill="#212529" stroke="#ffffff" stroke-width="1"></circle>'
     + '<line x1="4" y1="15" x2="26" y2="15" stroke-width="1" stroke="#ffffff"></line>'
     + '<line x1="15" y1="4" x2="15" y2="26" stroke-width="1" stroke="#ffffff"></line>';
@@ -87,421 +87,441 @@ var chart = new OrgChart(document.getElementById('tree'), {
 
 chart.load([
     {
-        id: 1,
-        name: "Kaschif R. Israr",
-        title: "Country Head",
-        img: "./assets/Color/1.png",
-        email: "Kaschif@eurocentra.com.pk",
+      name: 'Kaschif R. Israr',
+      id: 'Country Head',
+      title: 'Country Head',
+      img: './assets/Color/1.png',
+      email: 'Kaschif@eurocentra.com.pk'
     },
     {
-        id: 101,
-        name: "Annika Schwaegerl",
-        title: "Sales Director Europe",
-        img: "./assets/Color/0.png",
-        email: "annika_schwaegerl@eurocentra.com.hk",
+      name: 'Annika Schwaegerl',
+      id: 'SD Euro',
+      title: 'Sales Director Europe',
+      img: './assets/Color/0.png',
+      email: 'annika_schwaegerl@eurocentra.com.hk'
     },
     {
-        id: 2,
-        pid: 1,
-        name: "Business Team",
-        title: "",
-        img: "",
-        email: "",
-
+      name: 'Business Team',
+      id: 'Business',
+      pid: 'Country Head',
+      title: '',
+      img: './assets/business.png',
+      email: '',
     },
     {
-        id: 3,
-        pid: 1,
-        name: "Technical Team",
-        title: "",
-        img: "",
-        email: "",
-
+      name: 'Technical Team',
+      id: 'Technical',
+      pid: 'Country Head',
+      title: '',
+      img: './assets/tech.png',
+      email: ''
     },
     {
-        id: 4,
-        pid: 1,
-        name: "Services Team",
-        title: "",
-        img: "",
-        email: "",
-
+      name: 'Services Team',
+      id: 'Services',
+      pid: 'Country Head',
+      title: '',
+      img: './assets/idea.png',
+      email: ''
     },
     {
-        id: 5,
-        pid: 1,
-        name: "Supply Chain",
-        title: "",
-        img: "",
-        email: "",
-
+      name: 'Supply Chain',
+      id: 'Supply',
+      pid: 'Country Head',
+      title: '',
+      img: './assets/supply.png',
+      email: ''
     },
     {
-        id: 6,
-        pid: 1,
-        name: "Operational Support Group (OSG)",
-        title: "",
-        img: "",
-        email: "",
-
+      name: 'Operational Support Group (OSG)',
+      id: 'OSG',
+      pid: 'Country Head',
+      title: '',
+      img: './assets/osg.png',
+      email: ''
     },
     {
-        id: 7,
-        pid: 2,
-        name: "Umair Ahmed",
-        title: "Division Head Bonprix-Knits",
-        img: "./assets/Color/15.png",
-        email: "Umair@eurocentra.com.pk",
-
+      name: 'Rana Sohaib Mustafa',
+      id: 'Lead2',
+      pid: 'Technical',
+      title: 'Head of Product Development & Manufacturing',
+      img: './assets/Color/2.png',
+      email: 'Sohaib@eurocentra.com.pk'
     },
     {
-        id: 8,
-        pid: 2,
-        name: "Abdul Hafeez",
-        title: "Division Head Bonprix-Woven",
-        img: "./assets/Color/17.png",
-        email: "abdul.hafeez@eurocentra.com.pk",
-
-    }, {
-        id: 9,
-        pid: 2,
-        name: "Muhammad Umar",
-        title: "Division Head - Bonprix / Limango",
-        img: "./assets/Color/16.png",
-        email: "Umer@eurocentra.com.pk",
-
-    },{
-        id: 10,
-        pid: 7,
-        name: "Kashif Younus",
-        title: "Deputy Merchandising Manager",
-        img: "./assets/Color/21.png",
-        email: "Kashif.younus@eurocentra.com.pk",
-
+      name: 'Zahid Sajjad',
+      id: 'Zahid Sajjad',
+      pid: 'Services',
+      title: 'Head of Sustainability, Digital Innovation & Services',
+      img: './assets/Color/zs.png',
+      email: 'zahid@eurocentra.com.pk'
     },
     {
-        id: 11,
-        pid: 8,
-        name: "Syed Amir Abbas",
-        title: "Deputy Merchandising Manager",
-        img: "./assets/Color/22.png",
-        email: "Aamir.abbas@eurocentra.com.pk",
+      name: 'Abdul Saboor',
+      id: 'Lead4',
+      pid: 'Supply',
+      title: 'Head of Supply Chain',
+      img: './assets/Color/4.png',
+      email: 'abdul.saboor@eurocentra.com.pk'
     },
     {
-        id: 112,
-        pid: 3,
-        name: "Rana Sohaib Mustafa",
-        title: "Head of Product Development & Manufacturing",
-        img: "./assets/Color/2.png",
-        email: "Sohaib@eurocentra.com.pk",
+      name: 'Madni Khan',
+      id: 'Lead5',
+      pid: 'OSG',
+      title: 'Manager Finance & Corporate Governance',
+      img: './assets/Color/5.png',
+      email: 'Madni@eurocentra.com.pk'
     },
     {
-        id: 12,
-        pid: 112,
-        name: "Product Development",
-        title: "",
-        img: "",
-        email: "",
-    },{
-        id: 13,
-        pid: 112,
-        name: "3D Product Innovation",
-        title: "",
-        img: "",
-        email: "",
-    },{
-        id: 14,
-        pid: 112,
-        name: "Quality Development",
-        title: "",
-        img: "",
-        email: "",
-    },{
-        id: 15,
-        pid: 112,
-        name: "Textile Testing",
-        title: "",
-        img: "",
-        email: "",
-    },{
-        id: 16,
-        pid: 112,
-        name: "WFP Audits",
-        title: "",
-        img: "",
-        email: "",
+      name: 'Umair Ahmed Siddiqui',
+      id: 'Busemp1',
+      pid: 'Business',
+      title: 'Division Head Bonprix - Knits',
+      img: './assets/Color/15.png',
+      email: 'Umair@eurocentra.com.pk'
     },
     {
-        id: 17,
-        pid: 12,
-        name: "Khizar Hayat",
-        title: "Technical Lead",
-        img: "./assets/Color/14.png",
-        email: "khizar@eurocentra.com.pk",
-
+      name: 'Abdul Hafeez',
+      id: 'Busemp2',
+      pid: 'Business',
+      title: 'Division Head Bonprix-Woven',
+      img: './assets/Color/17.png',
+      email: 'abdul.hafeez@eurocentra.com.pk'
     },
     {
-        id: 18,
-        pid: 17,
-        name: "Muhammad Zeeshan",
-        title: "Technical Lead",
-        img: "./assets/Color/26.png",
-        email: "M.zeeshan@eurocentra.com.pk",
-
+      name: 'Muhammad Umar',
+      id: 'Busemp3',
+      pid: 'Business',
+      title: 'Division Head - Bonprix / Limango',
+      img: './assets/Color/16.png',
+      email: 'Umer@eurocentra.com.pk'
     },
     {
-        id: 19,
-        pid: 18,
-        name: "Muhammad Tahreem",
-        title: "Technical Lead",
-        img: "./assets/Color/23.png",
-        email: "tehreem@eurocentra.com.pk",
-
+      name: 'Kashif Younus',
+      id: 'Busemp4',
+      pid: 'Busemp1',
+      title: 'Deputy Merchandising Manager',
+      img: './assets/Color/21.png',
+      email: 'Kashif.younus@eurocentra.com.pk'
     },
     {
-        id: 20,
-        pid: 13,
-        name: "Imran Amjad",
-        title: "Team Lead 3D",
-        img: "./assets/Color/25.png",
-        email: "imran.amjad@eurocentra.com.pk",
-
+      name: 'Syed Amir Abbas',
+      id: 'Busemp5',
+      pid: 'Busemp2',
+      title: 'Deputy Merchandising Manager',
+      img:
+        './assets/Color/22.png',
+      email: 'Aamir.abbas@eurocentra.com.pk'
     },
     {
-        id: 21,
-        pid: 14,
-        name: "MUHAMMAD ASIM",
-        title: "Regional Quality Head",
-        img: "./assets/Color/13.png",
-        email: "asim@eurocentra.com.pk",
-
+      name: 'Product Development',
+      id: 'PD',
+      pid: 'Lead2',
+      title: '',
+      img: '',
+      email: ''
     },
     {
-        id: 22,
-        pid: 15,
-        name: "Dania Jamil",
-        title: "Testing Manager",
-        img: "./assets/Color/31.png",
-        email: "dania@eurocentra.com.pk",
-
+      name: '3D Product Innovation',
+      id: '3D',
+      pid: 'Lead2',
+      title: '',
+      img: '',
+      email: ''
     },
     {
-        id: 23,
-        pid: 22,
-        name: "Muhammad Owais",
-        title: "Laboratory Incharge",
-        img: "./assets/Color/30.png",
-        email: "",
-
+      name: 'Quality Development',
+      id: 'QD',
+      pid: 'Lead2',
+      title: '',
+      img: '',
+      email: ''
     },
     {
-        id: 24,
-        pid: 16,
-        name: "Ismail Khan",
-        title: "Manager, Chemical Management",
-        img: "./assets/Color/27.png",
-        email: "ismail@eurocentra.com.pk",
-
+      name: 'Textile Testing',
+      id: 'TT',
+      pid: 'Lead2',
+      title: '',
+      img: '',
+      email: ''
     },
     {
-        id: 113,
-        pid: 4,
-        name: "Zahid Sajjad",
-        title: "Head of Sustainability, Digital Innovation & Services",
-        img: "./assets/Color/zs.png",
-        email: "zahid@eurocentra.com.pk",
+      name: 'WFP Audits',
+      id: 'WFP',
+      pid: 'Lead2',
+      title: '',
+      img: '',
+      email: ''
     },
     {
-        id: 25,
-        pid: 113,
-        name: "Digitalization Asset Management (DAM)",
-        title: "",
-        img: "",
-        email: "",
-
+      name: 'Khizar Hayat',
+      id: 'Khizar Hayat',
+      pid: 'PD',
+      title: 'Technical Lead',
+      img:
+        './assets/Color/14.png',
+      email: 'khizar@eurocentra.com.pk'
     },
     {
-        id: 26,
-        pid: 113,
-        name: "Sustainability & CSR",
-        title: "",
-        img: "",
-        email: "",
-
+      name: 'Muhammad Zeeshan',
+      id: 'Muhammad Zeeshan',
+      pid: 'Khizar Hayat',
+      title: 'Technical Lead',
+      img: './assets/Color/26.png',
+      email: 'M.zeeshan@eurocentra.com.pk'
     },
     {
-        id: 27,
-        pid: 113,
-        name: "Logistics",
-        title: "",
-        img: "",
-        email: "",
-
+      name: 'Muhammad Tahreem',
+      id: 'Muhammad Tahreem',
+      pid: 'Muhammad Zeeshan',
+      title: 'Technical Lead',
+      img: './assets/Color/23.png',
+      email: 'tehreem@eurocentra.com.pk'
     },
     {
-        id: 28,
-        pid: 113,
-        name: "Product Library",
-        title: "",
-        img: "",
-        email: "",
-
+      name: 'Imran Amjad',
+      id: 'Imran Amjad',
+      pid: '3D',
+      title: 'Team Lead 3D',
+      img: './assets/Color/25.png',
+      email: 'imran.amjad@eurocentra.com.pk'
     },
     {
-        id: 29,
-        pid: 113,
-        name: "Human Asset Management (HAM",
-        title: "",
-        img: "",
-        email: "",
-
+      name: 'Muhammad Asim',
+      id: 'Muhammad Asim',
+      pid: 'QD',
+      title: 'Regional Quality Head',
+      img: './assets/Color/13.png',
+      email: 'asim@eurocentra.com.pk'
     },
     {
-        id: 30,
-        pid: 25,
-        name: "Muhammad Aamir",
-        title: "MIS Manager",
-        img: "./assets/Color/9.png",
-        email: "aamir@eurocentra.com.pk",
+      name: 'Muhammad Jamil',
+      id: 'Muhammad Jamil',
+      pid: 'Muhammad Asim',
+      title: 'Quality Lead',
+      img: './assets/Color/34.png',
+      email: 'jamil-eurocentra@outlook.com'
     },
     {
-        id: 31,
-        pid: 30,
-        name: "Sadad Ali",
-        title: "MIS Executive",
-        img: "./assets/Color/19.png",
-        email: "sadad@eurocentra.com.pk",
+      name: 'S M Faisal Iqbal',
+      id: 'S M Faisal Iqbal',
+      pid: 'Muhammad Jamil',
+      title: 'Quality Lead',
+      img: './assets/Color/35.png',
+      email: 'mfaisal-eurocentra@outlook.com'
     },
     {
-        id: 32,
-        pid: 31,
-        name: "Muhammad Noman",
-        title: "Excellence Manager",
-        img: "./assets/Color/8.png",
-        email: "Noman@eurocentra.com.pk",
+      name: 'Shahzad Ansari',
+      id: 'Shahzad Ansari',
+      pid: 'S M Faisal Iqbal',
+      title: 'Quality Lead',
+      img: './assets/Color/32.png',
+      email: 'shahzad-eurocentra@outlook.com'
     },
     {
-        id: 33,
-        pid: 26,
-        name: "Ahmed Adeel",
-        title: "Sustainability Manager",
-        img: "./assets/Color/11.png",
-        email: "ahmed.adeel@eurocentra.com.pk",
+      name: 'Dania Jamil',
+      id: 'Dania Jamil',
+      pid: 'TT',
+      title: 'Testing Manager',
+      img: './assets/Color/31.png',
+      email: 'dania@eurocentra.com.pk'
     },
     {
-        id: 34,
-        pid: 33,
-        name: "Basit Ali",
-        title: "CSR Executive",
-        img: "./assets/Color/18.png",
-        email: "Basit.ali@eurocentra.com.pk",
+      name: 'Muhammad Owais',
+      id: 'Muhammad Owais',
+      pid: 'Dania Jamil',
+      title: 'Laboratory Incharge',
+      img: './assets/Color/59.png',
+      email: ''
     },
     {
-        id: 35,
-        pid: 34,
-        name: "Jameel Ahmed",
-        title: "Project Manager",
-        img: "./assets/Color/10.png",
-        email:"Jameel@eurocentra.com.pk",
+      name: 'Ismail Khan',
+      id: 'Ismail Khan',
+      pid: 'WFP',
+      title: 'Manager, Chemical Management',
+      img: './assets/Color/27.png',
+      email: 'ismail@eurocentra.com.pk'
     },
     {
-        id: 36,
-        pid: 27,
-        name: "Grephen Almas",
-        title: "Logistics Manager",
-        img: "./assets/Color/12.png",
-        email: "grephen@eurocentra.com.pk",
+      name: 'Digitalization Asset Management (DAM)',
+      id: 'DAM',
+      pid: 'Zahid Sajjad',
+      title: '',
+      img: '',
+      email: ''
     },
     {
-        id: 37,
-        pid: 36,
-        name: "Mehreen Idrees",
-        title: "Assisstant Logistics Manager",
-        img: "./assets/Color/20.png",
-        email: "Mehreen@eurocentra.com.pk",
+      name: 'Sustainability & CSR',
+      id: 'CSR',
+      pid: 'Zahid Sajjad',
+      title: '',
+      img: '',
+      email: ''
     },
     {
-        id: 38,
-        pid: 28,
-        name: "Sikandar Solangi",
-        title: "Librarian",
-        img: "./assets/Color/00.png",
-        email: "",
+      name: 'Logistics',
+      id: 'Logistics',
+      pid: 'Zahid Sajjad',
+      title: '',
+      img: '',
+      email: ''
     },
     {
-        id: 39,
-        pid: 29,
-        name: "TBH",
-        title: "Talent Acquisition Specialist",
-        img: "./assets/Color/00.png",
-        email: "",
+      name: 'Product Library',
+      id: 'PL',
+      pid: 'Zahid Sajjad',
+      title: '',
+      img: '',
+      email: ''
     },
     {
-        id: 40,
-        pid: 39,
-        name: "Muhammad Safwan",
-        title: "Working Student",
-        img: "./assets/Color/6.png",
-        email: "hr@eurocentra.com.pk",
+      name: 'Human Asset Management (HAM)',
+      id: 'HAM',
+      pid: 'Zahid Sajjad',
+      title: '',
+      img: '',
+      email: ''
     },
     {
-        id: 114,
-        pid: 5,
-        name: "Abdul Saboor",
-        title: "Head of Supply Chain",
-        img: "./assets/Color/4.png",
-        email: "abdul.saboor@eurocentra.com.pk",
+      name: 'Muhammad Aamir',
+      id: 'Muhammad Aamir',
+      pid: 'DAM',
+      title: 'MIS Manager',
+      img: './assets/Color/9.png',
+      email: 'aamir@eurocentra.com.pk'
     },
     {
-        id: 115,
-        pid: 6,
-        name: "Madni Khan",
-        title: "Manager Finance & Corporate Governance",
-        img: "./assets/Color/5.png",
-        email: "Madni@eurocentra.com.pk",
+      name: 'Sadad Ali',
+      id: 'Sadad Ali',
+      pid: 'Muhammad Aamir',
+      title: 'MIS Executive',
+      img: './assets/Color/19.png',
+      email: 'sadad@eurocentra.com.pk'
     },
     {
-        id: 41,
-        pid: 115,
-        name:"Sajjad Hussain",
-        title: "IT & Communication Manager",
-        img: "./assets/Color/56.png",
-        email: "it@eurocentra.com.pk",
+      name: 'Muhammad Noman',
+      id: 'Muhammad Noman',
+      pid: 'Sadad Ali',
+      title: 'Excellence Manager',
+      img: './assets/Color/8.png',
+      email: 'Noman@eurocentra.com.pk'
     },
     {
-        id: 42,
-        pid: 41,
-        name: "Abdul Manan",
-        title: "Facility Services Manager",
-        img: "./assets/Color/57.png",
-        email: "abdulmanan@eurocentra.com.pk",
+  
+      id: 'Ahmed Adeel',
+      pid: 'CSR',
+      name: 'Ahmed Adeel',
+      title: 'Sustainability Manager',
+      img: './assets/Color/11.png',
+      email: 'ahmed.adeel@eurocentra.com.pk'
     },
     {
-        id: 43,
-        pid: 42,
-        name: "Pervez Ahmed",
-        title: "Front Desk officer",
-        img: "./assets/Color/55.png",
-        email: "pervez@eurocentra.com.pk",
+  
+      id: 'Basit Ali',
+  
+      pid: 'Ahmed Adeel',
+      name: 'Basit Ali',
+      title: 'CSR Executive',
+      img: './assets/Color/18.png',
+      email: 'Basit.ali@eurocentra.com.pk'
     },
     {
-        id: 44,
-        pid: 43,
-        name: "Naeem",
-        title: "Facility Officer",
-        img: "./assets/Color/54.png",
-        email: "",
+  
+      id: 'Jameel Ahmed',
+      name: 'Jameel Ahmed',
+      pid: 'Basit Ali',
+      title: 'Project Manager',
+      img: './assets/Color/10.png',
+      email: 'Jameel@eurocentra.com.pk'
     },
     {
-        id: 45,
-        pid: 44,
-        name: "Javaid",
-        title: "Chauffeur",
-        img: "./assets/Color/53.png",
-        email: "",
+  
+      id: 'Grephen Almas',
+      pid: 'Logistics',
+      name: 'Grephen Almas',
+      title: 'Logistics Manager',
+      img: './assets/Color/12.png',
+      email: 'grephen@eurocentra.com.pk'
     },
-    
-]);
+    {
+  
+      id: 'Mehreen Idrees',
+      pid: 'Grephen Almas',
+      name: 'Mehreen Idrees',
+      title: 'Assisstant Logistics Manager',
+      img: './assets/Color/20.png',
+      email: 'Mehreen@eurocentra.com.pk'
+    },
+    {
+  
+      id: 'Sikandar Solangi',
+      pid: 'PL',
+      name: 'Sikandar Solangi',
+      title: 'Librarian',
+      img: './assets/Color/60.png',
+      email: ''
+    },
+    {
+  
+      id: 'TBH',
+      pid: 'HAM',
+      name: 'TBH',
+      title: 'Talent Acquisition Specialist',
+      img: './assets/Color/00.png',
+      email: ''
+    },
+    {
+      id: 'Muhammad Safwan Khan',
+      pid: 'TBH',
+      name: 'Muhammad Safwan Khan',
+      title: 'Working Student',
+      img: './assets/Color/6.png',
+      email: 'hr@eurocentra.com.pk'
+    },
+    {
+  
+      id: 'Sajjad Hussain',
+      pid: 'Lead5',
+      name: 'Sajjad Hussain',
+      title: 'IT & Communication Manager',
+      img: './assets/Color/56.png',
+      email: 'it@eurocentra.com.pk'
+    },
+    {
+  
+      id: 'Abdul Manan',
+      pid: 'Sajjad Hussain',
+      name: 'Abdul Manan',
+      title: 'Facility Services Manager',
+      img: './assets/Color/57.png',
+      email: 'abdulmanan@eurocentra.com.pk'
+    },
+    {
+  
+      id: 'Pervez Ahmed',
+      pid: 'Abdul Manan',
+      name: 'Pervez Ahmed',
+      title: 'Front Desk officer',
+      img: './assets/Color/55.png',
+      email: 'pervez@eurocentra.com.pk'
+    },
+    {
+      id: 'Naeem',
+      pid: 'Pervez Ahmed',
+      name: 'Naeem',
+      title: 'Facility Officer',
+      img: './assets/Color/54.png',
+      email: ''
+    },
+    {
+      id: 'Javaid',
+      pid: 'Naeem',
+      name: 'Javaid',
+      title: 'Chauffeur',
+      img: './assets/Color/53.png',
+      email: ''
+    },
+  ]);
 
 
 
